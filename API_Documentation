@@ -1,0 +1,22 @@
+Backend Endpoints
+Upload PDF
+
+Endpoint: /upload/
+Method: POST
+Request Body: Form-data with file field containing the PDF file.
+Response: JSON object indicating successful upload or error message.
+Ask Question
+
+Endpoint: /ask/
+Method: POST
+Parameters: document_id (int), question (string)
+Response: JSON object containing the question and answer based on the uploaded PDF document.
+
+Example Usage
+
+Upload PDF Example:
+curl -X POST -F "file=@example.pdf" http://localhost:8000/upload/
+
+
+Ask Question Example:
+curl -X POST -d "document_id=1&question=What is the main topic of this document?" http://localhost:8000/ask/
