@@ -1,0 +1,12 @@
+The application architecture follows a client-server model:
+
+Backend (FastAPI): Handles HTTP requests, file uploads, PDF processing using PyMuPDF, and question answering using NLP (e.g., LangChain/LLamaIndex).
+Frontend (React.js): Provides a responsive user interface for interacting with the backend. Allows users to upload PDFs, ask questions, and view answers in a structured manner.
+Database (SQLite/PostgreSQL): Stores metadata of uploaded documents (e.g., filename, text content) for efficient retrieval and processing.
+The frontend communicates with the backend via RESTful API calls, ensuring seamless interaction and real-time updates for users. This architecture ensures scalability and maintainability, allowing future enhancements such as integrating additional NLP models, cloud storage for PDFs, and advanced user authentication and authorization features.
+
+Technologies Used
+Backend: FastAPI, SQLAlchemy, PyMuPDF
+Frontend: React.js, React Router, Axios
+Database: SQLite (for development), PostgreSQL (recommended for production)
+Deployment: Docker (optional), Heroku, AWS, or other cloud platforms
